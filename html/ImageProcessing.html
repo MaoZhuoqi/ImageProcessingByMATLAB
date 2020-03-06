@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>ImageProcessing</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-03-06"><meta name="DC.source" content="ImageProcessing.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput">pic1 = imread(<span class="string">'pic460x460.png'</span>);<span class="comment">%&#20174;&#25991;&#20214;&#35835;&#21462;&#22270;&#20687;</span>
+figure,imshow(pic1);<span class="comment">%&#23558;&#22270;&#20687;&#26174;&#31034;&#22312;figure1</span>
+pic2 = pic2gray(pic1);<span class="comment">%&#35843;&#29992;pic2gray&#20989;&#25968;&#65292;&#23558;&#22270;&#20687;&#36716;&#25442;&#20026;&#28784;&#24230;&#22270;</span>
+figure,imshow(pic2);<span class="comment">%&#23558;&#28784;&#24230;&#22270;&#26174;&#31034;&#22312;figure2</span>
+pic3 = picnarrow(pic1);<span class="comment">%&#35843;&#29992;picnarrow&#20989;&#25968;&#65292;&#23558;&#21407;&#22270;&#20687;&#32553;&#23567;&#33267;&#21407;&#26469;&#30340;&#19968;&#21322;</span>
+figure,imshow(pic3);<span class="comment">%&#23558;&#32553;&#23567;&#21518;&#30340;&#22270;&#20687;&#26174;&#31034;&#22312;figure3</span>
+imwrite(pic3,<span class="string">'pic230x230.jpeg'</span>);<span class="comment">%&#20197;jpeg&#26684;&#24335;&#23558;&#32553;&#23567;&#22270;&#20445;&#23384;</span>
+
+<span class="keyword">function</span> picgray = pic2gray(imrgb)<span class="comment">%&#23450;&#20041;pic2gray&#20989;&#25968;&#65292;&#29992;&#20110;&#23558;&#22270;&#20687;&#36716;&#25442;&#20026;&#28784;&#24230;&#22270;</span>
+    [m,n,t] = size(imrgb);<span class="comment">%&#35835;&#21462;&#22270;&#29255;&#30340;&#22823;&#23567;</span>
+    <span class="keyword">for</span> i = 1:m
+        <span class="keyword">for</span> j = 1:n
+            <span class="keyword">for</span> k = 1:t
+            picgray(i,j,k) = 0.299*imrgb(i,j,1)+0.587*imrgb(i,j,2)+0.11400*imrgb(i,j,3);<span class="comment">%&#21152;&#26435;&#23454;&#29616;&#20174;&#30495;&#24425;&#21040;&#28784;&#24230;&#30340;&#38477;&#32500;&#36716;&#25442;</span>
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> picresize = picnarrow(imrgb)<span class="comment">%&#23450;&#20041;picnarrow&#20989;&#25968;&#65292;&#29992;&#20110;&#23558;&#22270;&#20687;&#36827;&#34892;&#32553;&#25918;</span>
+    [h,w,t] = size(imrgb);<span class="comment">%&#35835;&#21462;&#22270;&#20687;&#22823;&#23567;</span>
+    xscale = 2;<span class="comment">%&#23485;&#24230;&#32553;&#23567;2&#20493;</span>
+    yscale = 2;<span class="comment">%&#39640;&#24230;&#32553;&#23567;2&#20493;</span>
+    ht = round(h./xscale);
+    wt = round(w./yscale);
+    <span class="keyword">for</span> i = 1:ht
+        <span class="keyword">for</span> j = 1:wt
+            <span class="keyword">for</span> k = 1:t
+                picresize(i,j,k) = imrgb(round(i*xscale),round(j*xscale),k);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="ImageProcessing_01.png" alt=""> <img vspace="5" hspace="5" src="ImageProcessing_02.png" alt=""> <img vspace="5" hspace="5" src="ImageProcessing_03.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+pic1 = imread('pic460x460.png');%从文件读取图像
+figure,imshow(pic1);%将图像显示在figure1
+pic2 = pic2gray(pic1);%调用pic2gray函数，将图像转换为灰度图
+figure,imshow(pic2);%将灰度图显示在figure2
+pic3 = picnarrow(pic1);%调用picnarrow函数，将原图像缩小至原来的一半
+figure,imshow(pic3);%将缩小后的图像显示在figure3
+imwrite(pic3,'pic230x230.jpeg');%以jpeg格式将缩小图保存
+
+function picgray = pic2gray(imrgb)%定义pic2gray函数，用于将图像转换为灰度图
+    [m,n,t] = size(imrgb);%读取图片的大小
+    for i = 1:m
+        for j = 1:n
+            for k = 1:t
+            picgray(i,j,k) = 0.299*imrgb(i,j,1)+0.587*imrgb(i,j,2)+0.11400*imrgb(i,j,3);%加权实现从真彩到灰度的降维转换
+            end
+        end
+    end
+end
+
+function picresize = picnarrow(imrgb)%定义picnarrow函数，用于将图像进行缩放
+    [h,w,t] = size(imrgb);%读取图像大小
+    xscale = 2;%宽度缩小2倍
+    yscale = 2;%高度缩小2倍
+    ht = round(h./xscale);
+    wt = round(w./yscale);
+    for i = 1:ht
+        for j = 1:wt
+            for k = 1:t
+                picresize(i,j,k) = imrgb(round(i*xscale),round(j*xscale),k); 
+            end
+        end
+    end
+end
+##### SOURCE END #####
+--></body></html>
