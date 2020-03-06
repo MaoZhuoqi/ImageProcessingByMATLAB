@@ -30,7 +30,8 @@ function picgray = pic2gray(imrgb)%定义pic2gray函数，用于将图像转换�
     for i = 1:m
         for j = 1:n
             for k = 1:t
-            picgray(i,j,k) = 0.299*imrgb(i,j,1)+0.587*imrgb(i,j,2)+0.11400*imrgb(i,j,3);%加权实现从真彩到灰度的降维转换
+            picgray(i,j,k) = 0.299*imrgb(i,j,1)+0.587*imrgb(i,j,2)+0.11400*imrgb(i,j,3);
+%加权实现从真彩到灰度的降维转换
             end
         end
     end
