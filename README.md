@@ -64,7 +64,7 @@ figure,imshow(pic1);%将图像显示在figure1
 
 
 
-![pic460x460](https://github.com/MaoZhuoqi/ImageProcessingByMATLAB/blob/master/460x460.png)
+![pic460x460](https://github.com/MaoZhuoqi/ImageProcessingByMATLAB/blob/master/pic460x460.png)
 
 ```matlab
 pic2 = pic2gray(pic1);%调用pic2gray函数，将图像转换为灰度图
