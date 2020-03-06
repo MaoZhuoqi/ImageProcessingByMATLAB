@@ -64,7 +64,7 @@ figure,imshow(pic1);%将图像显示在figure1
 
 
 
-![pic460x460](C:\Users\毛卓淇\OneDrive - hdu.edu.cn\桌面\files\matlab\MATLAB_EE\second_class\pic460x460.png)
+![pic460x460](https://github.com/MaoZhuoqi/ImageProcessingByMATLAB/blob/master/460x460.png)
 
 ```matlab
 pic2 = pic2gray(pic1);%调用pic2gray函数，将图像转换为灰度图
@@ -73,7 +73,7 @@ figure,imshow(pic2);%将灰度图显示在figure2
 
 
 
-![picgray](C:\Users\毛卓淇\OneDrive - hdu.edu.cn\桌面\files\matlab\MATLAB_EE\second_class\picgray.png)
+![picgray](https://github.com/MaoZhuoqi/ImageProcessingByMATLAB/blob/master/picgray.png)
 
 ```matlab
 pic3 = picnarrow(pic1);%调用picnarrow函数，将原图像缩小至原来的一半
@@ -83,7 +83,7 @@ imwrite(pic3,'pic230x230.jpeg');%以jpeg格式将缩小图保存
 
 
 
-![pic230x230](C:\Users\毛卓淇\OneDrive - hdu.edu.cn\桌面\files\matlab\MATLAB_EE\second_class\pic230x230.jpeg)
+![pic230x230](https://github.com/MaoZhuoqi/ImageProcessingByMATLAB/blob/master/pic230x230.jpeg)
 
 ## 其他
 
